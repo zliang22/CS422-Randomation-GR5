@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+  <title>Moch@</title>
+  <style>
+    body{
+      background-color: rgb(217, 223, 223) !important;
+    } 
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      
+      padding: 16px 16px 16px 16px;
+      text-decoration: none;
+      text-align: center;
+      color: #f1f1f1;
+      display: block;
+      
+    }
+
+    a:hover {
+      color: white;
+    }
+
+    
+
+    .home-page {
+      overflow: hidden;
+    }
+
+    .contain {
+      margin: 0 auto;
+      width: 1500px;
+    }
+
+    header {
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      border: 1px solid #ccc;
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      background-color: #fff;
+    }
+
+    .layui {
+      display: flex;
+      margin-top: 50px;
+    }
+
+    aside {
+      width: 200px;
+      border: 1px solid #ccc;
+      box-shadow: 0px 1px 2px 1px #ccc;
+      background-color: #111;
+    }
+
+    aside ul li {
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    
+
+    .content .leftP {
+      width: 1300px;
+      float: left;
+      height: 100%;
+      border: 1px solid #ccc;
+      margin-left: 10px;
+      background-color: white;
+    }
+
+    .content .right {
+      width: 270px;
+      float: right;
+      border: 1px solid #ccc;
+      height: 100%;
+      margin-left: 20px;
+    }
+
+    .content .left li {
+      height: 185px;
+      border-bottom: 1px solid #ccc;
+      padding: 10px;
+      line-height: 30px;
+    }
+
+    .content .left li a {
+      display: flex;
+
+    }
+
+    .content .left li .rightContent {
+      margin-top: 30px;
+      margin-left: 20px;
+      
+    }
+
+    .content .left li .rightContent .overflowEllipsis {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+
+    .content .left li .rightContent .reply {
+      color: #999;
+      display: flex;
+      justify-content:space-between;
+      
+    }
+
+    .content .NameBox{
+      padding: 5px; height: 40px; width: 95%;  font-family:"Arial";  font-size: 20px; margin-top: 25px; margin-left: 25px; border: 2px solid black;
+    }
+
+    .content .TitleBox{
+      padding: 5px; height: 50px; width: 95%;  font-family:"Arial";  font-size: 32px; margin-top: 25px; margin-left: 25px; border: 2px solid black;
+    }
+
+    .content .DescriptionBox{
+      padding: 5px; height: 600px; width: 95%;  font-family:"Arial";  font-size: 30px;   margin-top: 25px; margin-left: 25px; border: 2px solid black;
+    }
+
+    .content .ImageURL{
+      padding: 5px; height: 40px; width: 95%;  font-family:"Arial";  font-size: 20px;   margin-top: 25px; margin-left: 25px; border: 2px solid black;
+    }
+
+    .button .Send{
+      padding: 5px; height: 40px; width: 95%;  font-family:"Arial";  font-size: 24px;   margin-top: 25px; margin-left: 25px; 
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Moch@</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" style="text-align: center">
+                <a href="posts.html" class="nav-link" style="color: rgba(0,0,0,.5);">Community Chat</a>           
+            </li>
+            <li class="nav-item"  style="text-align: center">
+                <a href="drinks.html" class="nav-link" style="color: rgba(0,0,0,.5);">Read About Coffee</a>           
+            </li>
+            <li class="nav-item"  style="text-align: center">
+                <a href="quiz.html" class="nav-link" style="color: rgba(0,0,0,.5);">Take Quiz</a>           
+            </li>
+        </ul>
+    </div>      
+  </nav>
+  <div class="home-page">
+    <div class="layui contain">
+      <aside>
+        <ul>
+          
+            <a href="posts.html" style="font-size: 28px;">Posts</a>
+          <br>
+          
+            <a href="create-post.html" style="font-size: 28px;">Create Post</a>
+          <br>
+        </ul>
+      </aside>
+      <div class="content">
+        <ul class="leftP">
+          <li>
+            
+            <div class="rightContent">
+              <textarea class="NameBox" placeholder="Name (optional)"></textarea>
+              <br>
+              <textarea class="TitleBox" placeholder="Title"></textarea>
+              <br>
+              <textarea class="DescriptionBox" placeholder="Description"></textarea>
+              <br>
+              <textarea class="ImageURL" placeholder="Image Url (optional)"></textarea>
+              <br>
+              <input type="submit" value="Send" class="button" 
+              style="padding: 20px; margin-top: 30px; margin-left: 89%; margin-bottom: 25px; font-size: 24px;">
+            </div>
+
+          </li>
+          
+
+        </ul>
+
+        
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+  <title>Moch@</title>
+  <style>
+    body{
+      background-color: rgb(217, 223, 223) !important;
+    } 
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .a2{
+      padding: 16px 16px 16px 16px;
+      text-decoration: none;
+      text-align: center;
+      color: #f1f1f1;
+      display: block;
+      font-size: 28px;
+    }
+
+    .a2:hover {
+      color: white;
+      text-decoration: white;
+      text-decoration: underline;
+    }
+
+    .home-page {
+      overflow: hidden;
+    }
+
+    .contain {
+      margin: 0 auto;
+      width: 1500px;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      overflow: hidden;
+    }
+
+
+    .layui {
+      display: flex;
+      margin-top: 80px;
+    }
+
+    aside {
+      width: 200px;
+      border: 1px solid #ccc;
+      box-shadow: 0px 1px 2px 1px #ccc;
+      background-color: #111;
+    }
+
+    aside ul li {
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .content .left {
+      width: 1000px;
+      float: left;
+      height: 100%;
+      border: 1px solid #ccc;
+      margin-left: 10px;
+      background-color: white;
+    }
+
+    .content .right {
+      width: 270px;
+      float: right;
+      border: 1px solid #ccc;
+      height: 100%;
+      margin-left: 20px;
+    }
+
+    .content .left li {
+      height: 200px;
+      border-bottom: 1px solid #ccc;
+      padding: 10px;
+      line-height: 20px;
+    }
+
+    .content .left li a {
+      display: flex;
+
+    }
+
+    .content .left li .rightContent {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    .content .left li .rightContent .overflowEllipsis {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+
+    .content .left li .reply {
+      color: #999;
+      display: flex;
+      justify-content:space-between;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="home-page">
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Moch@</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" style="text-align: center">
+                    <a href="posts.html" class="nav-link" style="color: rgba(0,0,0,.5);">Community Chat</a>           
+                </li>
+                <li class="nav-item"  style="text-align: center">
+                    <a href="drinks.html" class="nav-link" style="color: rgba(0,0,0,.5);">Read About Coffee</a>           
+                </li>
+                <li class="nav-item"  style="text-align: center">
+                    <a href="quiz.html" class="nav-link" style="color: rgba(0,0,0,.5);">Take Quiz</a>           
+                </li>
+            </ul>
+        </div>      
+    </nav>
+  </header>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div class="layui contain">
+      <aside>
+        <ul>
+            <a href="posts.html" class="a2">Posts</a>
+          <br>
+            <a href="create-post.html" class="a2">Create Post</a>
+          <br>
+        </ul>
+      </aside>
+      <div class="content">
+        <ul class="left">
+          <li>
+            <a href="reply.html">
+              <div class="imgBox">
+                <img src="./image/contact.png" alt="">
+              </div>
+              
+              <div class="rightContent">
+                <h4>Which brand of coffee is the Rolls Royce of all coffee?</h4>
+                <p>
+                  Hi,
+
+                  I've just made a step forward and gave up instant coffee, bought a espresso machine but...
+                </p>
+              </div>
+            </a>
+
+            <p class="reply">
+              <span>4 reply</span>
+              <span>From Steve</span>
+            </p>
+            <p class="reply">
+              <span>2021-11-10 11:00 am</span>
+              <span>2021-11-09 12:59 pm</span>
+            </p>
+
+          </li>
+          <li>
+            <a href="reply.html">
+              <div class="imgBox">
+                <img src="./image/contact.png" alt="">
+              </div>
+
+              <div class="rightContent">
+                <h4>Which brand of coffee is the Rolls Royce of all coffee?</h4>
+                <p> 
+                  Hi, I've just made a step forward and gave up instant coffee, bought a espresso machine but...
+                </p>
+              </div>
+            </a>
+
+            <p class="reply">
+              <span>4 reply</span>
+              <span>From Steve</span>
+            </p>
+            <p class="reply">
+              <span>2021-11-10 11:00 am</span>
+              <span>2021-11-09 12:59 pm</span>
+            </p>
+
+          </li>
+          <li>
+            <a href="reply.html">
+              <div class="imgBox">
+                <img src="./image/contact.png" alt="">
+              </div>
+
+              <div class="rightContent">
+                <h4>Which brand of coffee is the Rolls Royce of all coffee?</h4>
+                <p>
+                  Hi,I've just made a step forward and gave up instant coffee, bought a espresso machine but...
+                </p>
+              </div>
+            </a>
+
+            <p class="reply">
+              <span>4 reply</span>
+              <span>From Steve</span>
+            </p>
+            <p class="reply">
+              <span>2021-11-10 11:00 am</span>
+              <span>2021-11-09 12:59 pm</span>
+            </p>
+
+          </li>
+          <li>
+            <a href="reply.html">
+              <div class="imgBox">
+                <img src="./image/contact.png" alt="">
+              </div>
+              <div class="rightContent">
+                <h4>Which brand of coffee is the Rolls Royce of all coffee?</h4>
+                <p>
+                  Hi, I've just made a step forward and gave up instant coffee, bought a espresso machine but...
+                </p>
+              </div>
+            </a>
+
+            <p class="reply">
+              <span>4 reply</span>
+              <span>From Steve</span>
+            </p>
+            <p class="reply">
+              <span>2021-11-10 11:00 am</span>
+              <span>2021-11-09 12:59 pm</span>
+            </p>
+
+          </li>
+          <li>
+            <a href="reply.html">
+              <div class="imgBox">
+                <img src="./image/contact.png" alt="">
+              </div>
+              <div class="rightContent">
+                <h4>Which brand of coffee is the Rolls Royce of all coffee?</h4>
+                <p>
+                  Hi, I've just made a step forward and gave up instant coffee, bought a espresso machine but...
+                </p>
+              </div>
+            </a>
+
+            <p class="reply">
+              <span>4 reply</span>
+              <span>From Steve</span>
+            </p>
+            <p class="reply">
+              <span>2021-11-10 11:00 am</span>
+              <span>2021-11-09 12:59 pm</span>
+            </p>
+
+          </li>
+          <li>
+            <a href="reply.html">
+              <div class="imgBox">
+                <img src="./image/contact.png" alt="">
+              </div>
+
+              <div class="rightContent">
+                <h4>Which brand of coffee is the Rolls Royce of all coffee?</h4>
+                <p>
+                  Hi, I've just made a step forward and gave up instant coffee, bought a espresso machine but...
+                </p>
+
+              </div>
+            </a>
+
+            <p class="reply">
+              <span>4 reply</span>
+              <span>From Steve</span>
+            </p>
+            <p class="reply">
+              <span>2021-11-10 11:00 am</span>
+              <span>2021-11-09 12:59 pm</span>
+            </p>
+
+          </li>
+        </ul>
+
+        <ul class="right">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+
+
+</script>
+
+</html>

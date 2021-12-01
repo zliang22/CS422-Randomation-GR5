@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/index.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
+<style>
+body {
+background-color: rgb(217, 223, 223) !important;
+  transition: background-color .5s;
+}
+p {
+  font-size: 20px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+.content {
+background-color: rgb(217, 223, 223) !important;
+  width: 1500px;
+  float: left;
+  height: 100%;
+  background-color: #fff;
+  padding: 15px;
+  line-height: 30px;
+  margin-bottom: 20px;
+  margin-left:20px;
+}
+
+	
+
+#main {
+  transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="techniques.html">Brewing Techinque</a>
+  <br>
+  <a href="drinks.html">Types of Drinks</a>
+  <br>
+  <a href="roast.html">Coffee Roast</a>
+</div>
+<div id="main">
+
+	<nav class="navbar navbar-expand-sm navbar-light bg-light">
+		<a class="navbar-brand" href="index.html">Moch@</a>
+		<button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="menu">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item" style="text-align: center">
+					<a href="posts.html" class="nav-link" style="color: rgba(0,0,0,.5);">Community Chat</a>           
+				</li>
+				<li class="nav-item"  style="text-align: center">
+					<a href="drinks.html" class="nav-link" style="color: rgba(0,0,0,.5);">Read About Coffee</a>           
+				</li>
+				<li class="nav-item"  style="text-align: center">
+					<a href="quiz.html" class="nav-link" style="color: rgba(0,0,0,.5);">Take Quiz</a>           
+				</li>
+			</ul>
+		</div>      
+	</nav>
+	
+	  <div  class="content">
+	  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+	  <h2>Types of Drinks</h2>
+
+		<h3>Espresso</h3><img src="resources/espresso.jpg" alt="Trulli" width="500" height="333"  style="float:left;padding:20px;">
+		<p>    Espresso is generally thicker than coffee brewed by other methods, with a viscosity 
+		  of warm honey. This is due to the higher concentration of suspended and dissolved solids, 
+		  and the crema on top (a foam with a creamy consistency). As a result of the pressurized brewing
+		  process, the flavors and chemicals in a typical cup of espresso are very concentrated. The three
+		  dispersed phases in espresso are what make this beverage unique. The first dispersed phase is an 
+		  emulsion of oil droplets. The second phase is suspended solids, while the third is the layer of gas
+		  bubbles or foam. The dispersion of very small oil droplets is perceived in the mouth as creamy. This
+		  characteristic of espresso contributes to what is known as the body of the beverage. These oil droplets
+		  preserve some of the aromatic compounds that are lost to the air in other coffee forms. This preserves 
+		  the strong coffee flavor present in the espresso.Espresso is also the base for various coffee 
+		  drinks—including caffè latte, cappuccino, caffè macchiato, caffè mocha, flat white, and caffè Americano.
+		</p>
+		<p>    Espresso has more caffeine per unit volume than most coffee beverages, but because the usual serving
+		  size is much smaller, the total caffeine content is less than a mug of standard brewed coffee. The
+		  actual caffeine content of any coffee drink varies by size, bean origin, roast method and other factors, but a 
+		  typical 28 grams (1 ounce) serving of espresso usually contains 65 milligrams of caffeine, whereas a typical serving
+		  of drip coffee usually contains 150 to 200 mg
+		</p>
+		<tr>
+		<h3>Latte</h3><img src="resources/latte-art.jpg" alt="Trulli" width="500" height="333"  style="float:left;padding:20px;">
+	    <p>Caffè latte (Italian: [kafˌfɛ lˈlatte, kaffe lˈlatte]), often shortened to just latte 
+			(/ˈlɑːteɪ, ˈlæteɪ/)[1][2] in English, is a coffee drink of Italian origin made with 
+			espresso and steamed milk.
+
+			The term comes from the Italian caffellatte[3] or
+			caffè latte, from caffè e latte, literally "coffee and milk"; 
+			in English orthography either or both words sometimes have an accent 
+			on the final e (a hyperforeignism or to indicate it is pronounced, not 
+			the more-common silent final e of English). In northern Europe and Scandinavia,
+			the term café au lait has traditionally been used for the combination of espresso 
+			and milk. In France, café latte is from the original name of the drink (caffè latte); 
+			a combination of espresso and steamed milk equivalent to a "latte" is in French called
+			grand crème and in German Milchkaffee or (in Austria) Wiener Melange.
+		</p>
+		<p>    Espresso has more caffeine per unit volume than most coffee beverages, but because the usual serving
+		  size is much smaller, the total caffeine content is less than a mug of standard brewed coffee. The
+		  actual caffeine content of any coffee drink varies by size, bean origin, roast method and other factors, but a 
+		  typical 28 grams (1 ounce) serving of espresso usually contains 65 milligrams of caffeine, whereas a typical serving
+		  of drip coffee usually contains 150 to 200 mg
+		</p>
+	  </div>
+
+
+
+
+
+  
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html> 
