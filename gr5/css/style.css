@@ -1,0 +1,19 @@
+html, body { 
+    width: 100%; 
+    height: 100%;
+}
+
+body{
+    background-color: rgb(217, 223, 223) !important;
+}
+
+.box{
+    border: 2px solid black;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}

@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(217, 223, 223) !important;
+}
+
+.question{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.question-box{
+    background-color: rgb(203, 241, 248);
+    border-radius: 10px;
+}

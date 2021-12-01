@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/index.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+  <title>Moch@</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #3384ff;
+    }
+
+    .home-page {
+      overflow: hidden;
+    }
+
+    .contain {
+      margin: 0 auto;
+      width: 1500px;
+    }
+
+
+
+    header {
+      position: fixed;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      overflow: hidden;
+    }
+
+
+    .layui {
+      display: flex;
+      justify-content: center;
+      margin-top: 80px;
+    }
+
+
+
+    .content .left {
+      width: 1000px;
+      float: left;
+      height: 100%;
+      background-color: #fff;
+      box-shadow: 0 0 2px 3px #ccc;
+      padding: 15px;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+
+    .content .left .head {
+      height: 80px;
+    }
+
+    .content .left .bottom_content {
+      line-height: 40px;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+
+    .content .left .bottom_content a {
+      color: #3384ff;
+    }
+
+    .content .left .bottom_content span {
+      margin-left: 30px;
+    }
+
+    .content .left .head .reply {
+      text-align: right;
+      color: #999;
+    }
+
+    .content .left .messageBoard {
+      border: 1px solid #ccc;
+      background-color: #f2f3f4;
+      margin-top: 30px;
+    }
+
+    .content .left .messageBoard .msgTitle {
+      height: 40px;
+      line-height: 40px;
+      border-bottom: 1px solid #ccc;
+      text-indent: 2em;
+    }
+
+    .content .left .messageBoard .msgContent {
+      padding: 20px;
+    }
+
+    .content .left .messageBoard .msgContent li {
+      height: fit-content;
+      margin: 20px;
+      border-bottom: 1px solid #ccc;
+      
+    }
+
+    .content .right {
+      width: 270px;
+      float: right;
+      height: 100%;
+      margin-left: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .content .replyDiv{
+      background: #ccc; width: 98%; padding: 20px; margin: 10px;
+    }
+
+
+    .content .replyBox{
+      padding: 5px; height: 150px; width: 100%;  font-family:"Arial";  font-size: 16px;   
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="home-page">
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Moch@</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" style="text-align: center">
+                    <a href="posts.html" class="nav-link" style="color: rgba(0,0,0,.5);">Community Chat</a>           
+                </li>
+                <li class="nav-item"  style="text-align: center">
+                    <a href="drinks.html" class="nav-link" style="color: rgba(0,0,0,.5);">Read About Coffee</a>           
+                </li>
+                <li class="nav-item"  style="text-align: center">
+                    <a href="quiz.html" class="nav-link" style="color: rgba(0,0,0,.5);">Take Quiz</a>           
+                </li>
+            </ul>
+        </div>      
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </header>
+    <div class="layui contain">
+
+      <div class="content">
+        <div class="left">
+          <div class="head">
+            <h3>Which brand of coffee is the Rolls Royce of all coffee?</h3>
+            <p class="reply">4 replies | 66 views</p>
+          </div>
+
+          <div class="bottom_content">
+            <img src="./image/contact.png" alt="">
+
+            <p class="replyContent">
+              Hi,
+              I've just made a step forward and gave up instant coffee, bought a espresso machine but I'd like to buy the best possible coffee.
+              Any help here? I started with lavazza coffee which tastes quite good. Which coffee is better? and more expensive?
+              :-D thanks
+              
+            </p>
+
+            <span>From: <a href="javascript:;">Steve</a> </span>
+          </div>
+
+          <div class = "replyDiv">
+            <form class = "f" action="">
+              Reply here:<br>
+              <textarea class="replyBox" ></textarea>
+                <br><br>
+                <input type="submit" value="Submit" class="button" style="padding: 5px;">
+              </form>
+          </div>
+
+          <div class="messageBoard">
+            <div class="msgTitle">
+              Replies:
+            </div>
+            <ul class="msgContent">
+              <li>
+                <span><a href="javascript:;">Tony:</a> </span><br>
+                From my research, it's Starbucks but that's just my opinion.
+              </li>
+              <li>
+                <span><a href="javascript:;">Jenny:</a> </span><br>
+                So yet another that truly appreciates The King of Char...
+              </li>
+              <li>
+                <span><a href="javascript:;">PB:</a> </span><br>
+                I'm sure there are some great Italian grown/processed coffees available, such as Illy and others, but by the time you buy it here in the US anything great it had to offer is long gone.
+                I just can't understand why so many think coffees like these are so awesome when most haven't given their local roasters a shot. Nothing beats fresh.
+              </li>
+              <li>
+                <span><a href="javascript:;">Anonymous:</a> </span><br>
+                My current favorite coffee is the old stand Lavazza. It really has full body and smoothness, not acidic.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="right">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+
+
+</script>
+
+</html>
