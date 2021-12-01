@@ -14,47 +14,36 @@ background-color: rgb(217, 223, 223) !important;
 }
 p {
   font-size: 20px;
+  margin-left: 20px;
 }
 
 .sidenav {
   height: 100%;
-  width: 0;
+  width: 250px;
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
-  transition: 0.5s;
   padding-top: 60px;
 }
 
 .sidenav a {
+  margin-top:55px;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
   display: block;
-  transition: 0.3s;
 }
 
 .sidenav a:hover {
   color: #f1f1f1;
 }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-
 
 .content {
 background-color: rgb(217, 223, 223) !important;
-  width: 1500px;
   float: left;
   height: 100%;
   background-color: #fff;
@@ -62,10 +51,18 @@ background-color: rgb(217, 223, 223) !important;
   margin-bottom: 20px;
   margin-left:20px;
 }
+
+h2{
+   text-align: center;
+}
+
+h3{
+ margin-left:20px;
+}
 	
 
 #main {
-  transition: margin-left .5s;
+  margin-left:250px;
 }
 
 @media screen and (max-height: 450px) {
@@ -77,15 +74,16 @@ background-color: rgb(217, 223, 223) !important;
 <body>
 
 
+
+
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="techniques.html">Brewing Techinque</a>
+  <a href="techniques.html">Brewing Technique</a>
   <br>
   <a href="drinks.html">Types of Drinks</a>
   <br>
   <a href="roast.html">Coffee Roast</a>
 </div>
-<div id="main">
+
 	<nav class="navbar navbar-expand-sm navbar-light bg-light">
 		<a class="navbar-brand" href="index.html">Moch@</a>
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
@@ -105,10 +103,14 @@ background-color: rgb(217, 223, 223) !important;
 			</ul>
 		</div>      
 	</nav>
+
+<div id="main">
+
 	<div  class="content">
-	  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-	  <h2>Brewing Techinque</h2>
-	  
+	  <br>
+	  <div>
+	  <h2>Brewing Technique</h2>
+		
 		<h3>Pour Over/Drip: Coffee Cone</h3><img src="resources/pour.jpg" alt="Trulli" width="400" height="400"  style="float:left;padding:20px;">
 		<p>    Espresso is generally thicker than coffee brewed by other methods, with a viscosity 
 		  of warm honey. This is due to the higher concentration of suspended and dissolved solids, 
@@ -128,8 +130,11 @@ background-color: rgb(217, 223, 223) !important;
 		  typical 28 grams (1 ounce) serving of espresso usually contains 65 milligrams of caffeine, whereas a typical serving
 		  of drip coffee usually contains 150 to 200 mg
 		</p>
-		<tr>
-		<h3>Plunger/Press:French Press</h3><img src="resources/press.jpg" alt="Trulli" width="400" height="400"  style="float:left;padding:20px;">
+		</div>
+		<br>
+		<div>
+		<h3>Plunger/Press:French Press</h3>
+		<img src="resources/press.jpg" alt="Trulli" width="400" height="400"  style="float:left;padding:20px;">
 	    <p>
 			Caffè latte (Italian: [kafˌfɛ lˈlatte, kaffe lˈlatte]), often shortened to just latte 
 			(/ˈlɑːteɪ, ˈlæteɪ/)[1][2] in English, is a coffee drink of Italian origin made with 
@@ -152,6 +157,7 @@ background-color: rgb(217, 223, 223) !important;
 			typical 28 grams (1 ounce) serving of espresso usually contains 65 milligrams of caffeine, whereas a typical serving
 			of drip coffee usually contains 150 to 200 mg
 		</p>
+		</div>
 	  </div>
 
 
@@ -162,15 +168,7 @@ background-color: rgb(217, 223, 223) !important;
 </div>
 
 <script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
 </script>
    
 </body>
