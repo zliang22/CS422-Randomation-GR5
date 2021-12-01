@@ -131,13 +131,67 @@
     }
 
     .content .replyDiv{
-      background: #ccc; width: 98%; padding: 20px; margin: 10px;
+       background-color: #f2f3f4; width: 98%; padding: 20px; margin: 10px;
     }
 
 
     .content .replyBox{
       padding: 5px; height: 150px; width: 100%;  font-family:"Arial";  font-size: 16px;   
     }
+
+
+    .submitBtn {
+      background-color: white; 
+      color: black; 
+      border: 1px solid black;
+      width: 80px;
+    }
+
+    .submitBtn:hover {
+      background-color: #4CAF50;
+      color: white;
+      border:none
+    }
+
+    .clearBtn {
+      background-color: white; 
+      color: black; 
+      border: 1px solid black;
+      width: 60px;
+    }
+
+    .clearBtn:hover {
+      background-color: #f44336;
+      color: white;
+      border:none
+    }
+
+    .undoBtn {
+      background-color: #fff; 
+      color: black;
+      border: 1px solid black;
+      width: 60px;
+    }
+
+    .undoBtn:hover {
+      background-color: #f44336;
+      color: white;
+      border:none
+    }
+
+    .redoBtn {
+      background-color: #fff; 
+      color: black;
+      border: 1px solid black;
+      width: 60px;
+    }
+
+    .redoBtn:hover {
+      background-color: #4CAF50;
+      color: white;
+      border:none
+    }
+
 
   </style>
 </head>
@@ -151,18 +205,18 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item" style="text-align: center">
-                    <a href="posts.html" class="nav-link" style="color: rgba(0,0,0,.5);">Community Chat</a>           
-                </li>
-                <li class="nav-item"  style="text-align: center">
-                    <a href="drinks.html" class="nav-link" style="color: rgba(0,0,0,.5);">Read About Coffee</a>           
-                </li>
-                <li class="nav-item"  style="text-align: center">
-                    <a href="quiz.html" class="nav-link" style="color: rgba(0,0,0,.5);">Take Quiz</a>           
-                </li>
-            </ul>
-        </div>      
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item" style="text-align: center">
+                  <a href="posts.html" class="nav-link"  id="communityTab" style="color: rgba(0,0,0,.5);"><span id="tab1">Community Chat</span></a>           
+              </li>
+              <li class="nav-item"  style="text-align: center">
+                  <a href="drinks.html" class="nav-link"  id="readingTab" style="color: rgba(0,0,0,.5);"><span id="tab2">Read About Coffee</span></a>           
+              </li>
+              <li class="nav-item"  style="text-align: center">
+                  <a href="quiz.html" class="nav-link"  id="quizTab" style="color: rgba(0,0,0,.5);"><span id="tab3">Take Quiz</span></a>           
+              </li>
+          </ul>
+        </div>       
     </nav>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -175,7 +229,7 @@
         <div class="left">
           <div class="head">
             <h3>Which brand of coffee is the Rolls Royce of all coffee?</h3>
-            <p class="reply">4 replies | 66 views</p>
+            <p class="reply"><span id = replyCount>4</span> replies | 66 views</p>
           </div>
 
           <div class="bottom_content">
@@ -193,19 +247,22 @@
           </div>
 
           <div class = "replyDiv">
-            <form class = "f" action="">
+            
               Reply here:<br>
-              <textarea class="replyBox" ></textarea>
+              <textarea class="replyBox" id = "userReplyArea"></textarea>
                 <br><br>
-                <input type="submit" value="Submit" class="button" style="padding: 5px;">
-              </form>
+                <input type="submit" value="Undo" class="button undoBtn" id = "undo" style="padding: 5px; margin-left: 8%;" onclick="" >
+                <input type="submit" value="Redo" class="button redoBtn" id = "redo" style="padding: 5px; margin-left: 2%;" onclick="">
+                <input type="submit" value="Clear" class="button clearBtn"  style="padding: 5px; margin-left: 10%;" onclick="clearTextArea()">
+                <input type="submit" value="Submit" class="button submitBtn" style="padding: 5px; margin-left: 40%;" onclick="addReply(); ">
+
           </div>
 
           <div class="messageBoard">
             <div class="msgTitle">
               Replies:
             </div>
-            <ul class="msgContent">
+            <ul class="msgContent" id = "msgBoard">
               <li>
                 <span><a href="javascript:;">Tony:</a> </span><br>
                 From my research, it's Starbucks but that's just my opinion.
@@ -239,7 +296,118 @@
   </div>
 </body>
 
+<script src="js/UndoRedo.js"></script>
 <script>
+
+window.onload = function(e){
+		document.getElementById("tab2").style.color = "white";
+      document.getElementById("readingTab").style.backgroundColor = "black";
+	}
+
+  // Get the textarea
+  const textarea = document.querySelector("#userReplyArea")
+
+  function addReply(){
+
+    if(document.getElementById("userReplyArea").value.trim() == ''){
+      alert("You have not entered anything yet!");
+    }
+    else{
+
+      if (confirm('Are you sure you want to submit your reply?')) {
+        var mySpan = document.createElement('span');
+        var li = document.createElement("li");
+        var ul = document.getElementById("msgBoard");
+        li.innerHTML = "<span><a href=\"javascript:;\">Anonymous:</a> </span><br>" + document.getElementById("userReplyArea").value;
+        ul. appendChild(li);
+
+        localStorage.removeItem(textarea); 
+        textarea.value=''
+        localStorage.clear();
+
+        updateReplyCount();
+      } 
+
+    }
+
+  }
+
+  function updateReplyCount(){
+    var replyCountSpan = document.getElementById("replyCount");
+    var value = document.getElementById("replyCount").innerText;
+    console.log(value);
+    replyCountSpan.innerHTML = parseInt(value)+1;
+  } 
+
+  function clearTextArea(){
+    if (confirm('Are you sure you want to clear?')) {
+      // Save it!
+      localStorage.clear();
+      textarea.value=''
+      console.log('cleared');
+    } else {
+      // Do nothing!
+      console.log('nothing is cleared');
+    }
+  }
+
+  textarea.value = localStorage.getItem(textarea);
+  textarea.oninput = () => {
+      localStorage.setItem(textarea, userReplyArea.value)
+  };
+
+
+  /*
+  if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+    localStorage.clear();
+    console.info( "This page is reloaded" );
+  }
+  */
+
+  /*
+  window.onbeforeunload = function(){
+    return 'Are you sure you want to leave?';
+  };
+  */
+
+  // Require the library function
+  const userInputHistory = new window.UndoRedojs(5)
+
+  //credit to author: iMrDJAi, https://www.cssscript.com/undo-redo-history/
+  // Add event listener for inputs on the textarea
+  textarea.addEventListener('input', () => { 
+      // Check if the new textarea value is different
+      if (userInputHistory.current() !== textarea.value) {
+          // Check for pastes, auto corrects..
+          if ((textarea.value.length - userInputHistory.current().length) > 1 || (textarea.value.length - userInputHistory.current().length) < -1 || (textarea.value.length - userInputHistory.current().length) === 0) {
+              // Record the textarea value and force to bypass cooldown
+              userInputHistory.record(textarea.value, true)
+          // Check for single key press, single chacacter paste..
+          } else {
+              // Record the textarea value
+              userInputHistory.record(textarea.value)
+          }
+      }
+  })
+  
+  // Some browsers will auto-fill the textarea again after reloading, this will deal with that
+  setTimeout(() => {
+      if (textarea.value) userInputHistory.record(textarea.value, true)
+  }, 100)
+  // The undo button
+  
+  document.querySelector("#undo").addEventListener('click', () => {
+      if (userInputHistory.undo(true) !== undefined) {
+          textarea.value = userInputHistory.undo()
+      }
+  })
+  
+  // The redo button
+  document.querySelector("#redo").addEventListener('click', () => {
+      if (userInputHistory.redo(true) !== undefined) {
+          textarea.value = userInputHistory.redo()
+      }
+  })
 
 
 </script>

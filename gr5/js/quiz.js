@@ -6,23 +6,35 @@ function getRandomInt(max) {
 }
 
 function setQ1(ans){
+    resetButtons("1");
+    var buttonColor = document.getElementsByClassName("ans1")[ans-1];
+    buttonColor.style.backgroundColor = "rgb(128, 131, 131)";
+    buttonColor.style.color = "white";
     question_answer[0] = ans;
-    console.log(question_answer)
 }
 
 function setQ2(ans){
+    resetButtons("2");
+    var buttonColor = document.getElementsByClassName("ans2")[ans-1];
+    buttonColor.style.backgroundColor = "rgb(128, 131, 131)";
+    buttonColor.style.color = "white";
     question_answer[1] = ans;
-    console.log(question_answer)
 }
 
 function setQ3(ans){
+    resetButtons("3");
+    var buttonColor = document.getElementsByClassName("ans3")[ans-1];
+    buttonColor.style.backgroundColor = "rgb(128, 131, 131)";
+    buttonColor.style.color = "white";
     question_answer[2] = ans;
-    console.log(question_answer)
 }
 
 function setQ4(ans){
+    resetButtons("4");
+    var buttonColor = document.getElementsByClassName("ans4")[ans-1];
+    buttonColor.style.backgroundColor = "rgb(128, 131, 131)";
+    buttonColor.style.color = "white";
     question_answer[3] = ans;
-    console.log(question_answer)
 }
 
 
@@ -87,3 +99,11 @@ function compileResults(){
 
 }
 
+function resetButtons(num){
+    var elements = document.getElementsByClassName("ans"+num);
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.backgroundColor="white";
+        elements[i].style.color="black";
+    }
+
+}
