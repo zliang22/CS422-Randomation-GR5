@@ -18,54 +18,54 @@
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" style="text-align: center">
-                    <a href="posts.html" class="nav-link" style="color: rgba(0,0,0,.5);">Community Chat</a>           
+                    <a href="posts.html" class="nav-link"  id="communityTab" style="color: rgba(0,0,0,.5);"><span id="tab1">Community Chat</span></a>           
                 </li>
                 <li class="nav-item"  style="text-align: center">
-                    <a href="drinks.html" class="nav-link" style="color: rgba(0,0,0,.5);">Read About Coffee</a>           
+                    <a href="drinks.html" class="nav-link"  id="readingTab" style="color: rgba(0,0,0,.5);"><span id="tab2">Read About Coffee</span></a>           
                 </li>
                 <li class="nav-item"  style="text-align: center">
-                    <a href="quiz.html" class="nav-link" style="color: rgba(0,0,0,.5);">Take Quiz</a>           
+                    <a href="quiz.html" class="nav-link"  id="quizTab" style="color: rgba(0,0,0,.5);"><span id="tab3">Take Quiz</span></a>           
                 </li>
             </ul>
-        </div>      
+          </div>           
     </nav>
 
     <div class="container mt-4 question-box">
         <div class="row">
-            <div class="col-lg-12 mt-3 mb-3">
-                <div class="question">How Strong Do You Like Your Coffee?</div>
+            <div class="col-lg-12 mt-3 mb-3 bg-dark pb-4 pt-4">
+                <div class="question text-white">How Strong Do You Like Your Coffee?</div>
                 <div class="d-flex flex-column">
-                    <button onclick="setQ1(1)" class="btn btn-info btn-lg m-1">Bitter To The Bone</button>
-                    <button onclick="setQ1(2)" class="btn btn-info btn-lg m-1">Just lightly Sweetened But Still Somewhat Bitter</button>
-                    <button onclick="setQ1(3)" class="btn btn-info btn-lg m-1">Mostly Sweet But Still Have A Hint Of Coffee</button>
-                    <button onclick="setQ1(4)" class="btn btn-info btn-lg m-1">Wait You Guys Enjoy Bitter Coffee?</button>
+                    <button onclick="setQ1(1)" class="btn btn-light btn-lg m-1 ans1">Bitter To The Bone</button>
+                    <button onclick="setQ1(2)" class="btn btn-light btn-lg m-1 ans1">Just lightly Sweetened But Still Somewhat Bitter</button>
+                    <button onclick="setQ1(3)" class="btn btn-light btn-lg m-1 ans1">Mostly Sweet But Still Have A Hint Of Coffee</button>
+                    <button onclick="setQ1(4)" class="btn btn-light btn-lg m-1 ans1">Wait You Guys Enjoy Bitter Coffee?</button>
                 </div>
             </div>
-            <div class="col-lg-12 mt-3 mb-3">
-                <div class="question">How Much Caffeine Do You Need?</div>
+            <div class="col-lg-12 mt-3 mb-3 bg-dark pb-4 pt-4">
+                <div class="question text-white">How Much Caffeine Do You Need?</div>
                 <div class="d-flex flex-column">
-                    <button onclick="setQ2(1)" class="btn btn-info btn-lg m-1">Yes.</button>
-                    <button onclick="setQ2(2)" class="btn btn-info btn-lg m-1">Extra Caffeine or Expresso</button>
-                    <button onclick="setQ2(3)" class="btn btn-info btn-lg m-1">Regular Caffeine or a Regular Cup of Coffee</button>
-                    <button onclick="setQ2(4)" class="btn btn-info btn-lg m-1">Decaf or Reduced Caffeine</button>
+                    <button onclick="setQ2(1)" class="btn btn-light btn-lg m-1 ans2">Yes.</button>
+                    <button onclick="setQ2(2)" class="btn btn-light btn-lg m-1 ans2">Extra Caffeine or Expresso</button>
+                    <button onclick="setQ2(3)" class="btn btn-light btn-lg m-1 ans2">Regular Caffeine or a Regular Cup of Coffee</button>
+                    <button onclick="setQ2(4)" class="btn btn-light btn-lg m-1 ans2">Decaf or Reduced Caffeine</button>
                 </div>
             </div>
-            <div class="col-lg-12 mt-3 mb-3">
-                <div class="question">Which below Best Describes Your Likings?</div>
+            <div class="col-lg-12 mt-3 mb-3 bg-dark pb-4 pt-4">
+                <div class="question text-white">Which below Best Describes Your Likings?</div>
                 <div class="d-flex flex-column">
-                    <button onclick="setQ3(1)" class="btn btn-info btn-lg m-1">Foamy</button>
-                    <button onclick="setQ3(2)" class="btn btn-info btn-lg m-1">Creamy</button>
-                    <button onclick="setQ3(3)" class="btn btn-info btn-lg m-1">Heavy</button>
-                    <button onclick="setQ3(4)" class="btn btn-info btn-lg m-1">No Preference</button>
+                    <button onclick="setQ3(1)" class="btn btn-light btn-lg m-1 ans3">Foamy</button>
+                    <button onclick="setQ3(2)" class="btn btn-light btn-lg m-1 ans3">Creamy</button>
+                    <button onclick="setQ3(3)" class="btn btn-light btn-lg m-1 ans3">Heavy</button>
+                    <button onclick="setQ3(4)" class="btn btn-light btn-lg m-1 ans3">No Preference</button>
                 </div>
             </div>
-            <div class="col-lg-12 mt-3 mb-3">
-                <div class="question">What Chocolate Do You Prefer?</div>
+            <div class="col-lg-12 mt-3 mb-3 bg-dark pb-4 pt-4">
+                <div class="question text-white">What Chocolate Do You Prefer?</div>
                 <div class="d-flex flex-column">
-                    <button onclick="setQ4(1)" class="btn btn-info btn-lg m-1">Dark Chocolate</button>
-                    <button onclick="setQ4(2)" class="btn btn-info btn-lg m-1">Milk Chocolate</button>
-                    <button onclick="setQ4(3)" class="btn btn-info btn-lg m-1">White Chocaloate</button>
-                    <button onclick="setQ4(4)" class="btn btn-info btn-lg m-1">Whatever Is Fine</button>
+                    <button onclick="setQ4(1)" class="btn btn-light btn-lg m-1 ans4">Dark Chocolate</button>
+                    <button onclick="setQ4(2)" class="btn btn-light btn-lg m-1 ans4">Milk Chocolate</button>
+                    <button onclick="setQ4(3)" class="btn btn-light btn-lg m-1 ans4">White Chocaloate</button>
+                    <button onclick="setQ4(4)" class="btn btn-light btn-lg m-1 ans4">Whatever Is Fine</button>
                 </div>
             </div>
             <div class="col-lg-12 mt-3 mb-3">
@@ -92,7 +92,7 @@
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary">
-                <a href="index.html" style="color: white;">Read More</a>
+                <a href="drinks.html" style="color: white;">Read More</a>
             </button>
             </div>
         </div>
@@ -103,4 +103,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+<script>
+    $(document).ready(function () {
+        set_highlight();
+    });
+
+    function set_highlight(){
+      document.getElementById("tab3").style.color = "white";
+      document.getElementById("quizTab").style.backgroundColor = "black";
+    }
+</script>
 </html>

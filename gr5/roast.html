@@ -80,7 +80,7 @@ h3{
   <br>
   <a href="drinks.html">Types of Drinks</a>
   <br>
-  <a href="roast.html">Coffee Roast</a>
+  <a href="roast.html"><span id="roastTab">Coffee Roast</span></a>
 </div>
 
 
@@ -93,16 +93,16 @@ h3{
 	<div class="collapse navbar-collapse" id="menu">
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item" style="text-align: center">
-				<a href="posts.html" class="nav-link" style="color: rgba(0,0,0,.5);">Community Chat</a>           
+				<a href="posts.html" class="nav-link"  id="communityTab" style="color: rgba(0,0,0,.5);"><span id="tab1">Community Chat</span></a>           
 			</li>
 			<li class="nav-item"  style="text-align: center">
-				<a href="drinks.html" class="nav-link" style="color: rgba(0,0,0,.5);">Read About Coffee</a>           
+				<a href="drinks.html" class="nav-link"  id="readingTab" style="color: rgba(0,0,0,.5);"><span id="tab2">Read About Coffee</span></a>           
 			</li>
 			<li class="nav-item"  style="text-align: center">
-				<a href="quiz.html" class="nav-link" style="color: rgba(0,0,0,.5);">Take Quiz</a>           
+				<a href="quiz.html" class="nav-link"  id="quizTab" style="color: rgba(0,0,0,.5);"><span id="tab3">Take Quiz</span></a>           
 			</li>
 		</ul>
-	</div>      
+	  </div>       
 </nav>
 <div id="main">
 
@@ -166,7 +166,11 @@ h3{
 </div>
 
 <script>
-
+	window.onload = function(e){
+		document.getElementById("tab2").style.color = "white";
+		document.getElementById("roastTab").style.color = "white";
+		document.getElementById("readingTab").style.backgroundColor = "black";
+	}
 </script>
    
 </body>
